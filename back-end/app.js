@@ -10,7 +10,7 @@ app.use(express.json())
 
 // MongoDB connection
 mongoose.connect(
-  "mongodb+srv://adhy:kannan123@cluster0.v6yc0yl.mongodb.net/jobPost"
+  "mongodb+srv://adhy:<Password>@cluster0.v6yc0yl.mongodb.net/jobPost"
 )
 .then(() => console.log("MongoDB connected"))
 .catch(err => console.error("Mongo error:", err.message))

@@ -20,7 +20,7 @@ npm install
 
 3. Update MongoDB connection string in server.js:
 
-mongoose.connect("your-mongodb-connection-string")
+"mongodb+srv://adhy:kannan123@cluster0.v6yc0yl.mongodb.net/jobPost"
 
 4. Start the backend server:
 
