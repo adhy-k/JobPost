@@ -68,7 +68,6 @@ const JobView = () => {
                     </div>
                 </div>
             </div>
-            <Footer />
         </div>
     )
 }

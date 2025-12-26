@@ -1,5 +1,6 @@
 import axios, { Axios } from 'axios'
 import React, { useState } from 'react'
+import { Helmet } from "react-helmet";
 import NavBar from './NavBar'
 import Footer from './Footer'
 
@@ -42,20 +43,24 @@ const JobPost = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>Find Your Dream Job</title>
+            </Helmet>
             <NavBar />
             <div className="container" style={{ paddingBottom: '200px' }}>
+                <p className="h1 mb-4 text-center mt-4">Post Jobs</p>
                 <div className="row">
                     <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                         <div className="row g-3">
-                            <div className="col-sm-12 col-md-12 col-12-lg col-xl-12 col-xxl-12">
+                            <div className="col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
                                 <label htmlFor="" className="form-label">Job Title</label>
                                 <input type="text" className="form-control" name='jobTitle' value={input.jobTitle} onChange={inputHandler} />
                             </div>
-                            <div className="col-sm-12 col-md-12 col-12-lg col-xl-12 col-xxl-12">
+                            <div className="col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
                                 <label htmlFor="" className="form-label">Company Name</label>
                                 <input type="text" className="form-control" name='companyName' value={input.companyName} onChange={inputHandler} />
                             </div>
-                            <div className="col-sm-12 col-md-12 col-12-lg col-xl-12 col-xxl-12">
+                            <div className="col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
                                 <label className="form-label">Category</label>
                                 <select
                                     className="form-select"
@@ -69,22 +74,21 @@ const JobPost = () => {
                                 </select>
 
                             </div>
-                            <div className="col-sm-12 col-md-12 col-12-lg col-xl-12 col-xxl-12">
+                            <div className="col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
                                 <label htmlFor="" className="form-label">Location</label>
                                 <input type="text" className="form-control" name='location' value={input.location} onChange={inputHandler} />
                             </div>
-                            <div className="col-sm-12 col-md-12 col-12-lg col-xl-12 col-xxl-12">
+                            <div className="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                                 <label htmlFor="" className="form-label">Description</label>
                                 <input type="text" className="form-control" name='description' value={input.description} onChange={inputHandler} />
                             </div>
-                            <div className="col-sm-12 col-md-12 col-12-lg col-xl-12 col-xxl-12">
+                            <div className="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                                 <button className="btn btn-success" onClick={readValues}>Submit</button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <Footer />
         </div>
     )
 }
