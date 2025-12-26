@@ -3,24 +3,24 @@ const mongoose = require("mongoose");
 const jobSchema = new mongoose.Schema({
 
     
-    job_title: {
+    jobTitle: {
         type: String,
         required: true
     },
-    company_name: {
+    companyName: {
         type: String,
         required: true
     },
     Category: {
         type: String,
-        enum: ["Developer", "Manager", "Designer", "Marketing", "Other"],
+        enum: ["Development", "Design", "Marketing", "Other"],
         required: true
     },
-    Location: {
+    location: {
         type: String,
         required: true
     },
-    Description: {
+    description: {
         type: String,
         required: true
     }
